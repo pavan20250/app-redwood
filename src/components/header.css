@@ -1,0 +1,97 @@
+/*----- Global Styles -----*/
+html {
+    scroll-behavior: smooth;
+}
+
+/*----- Header Styles -----*/
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 10px 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    background-color: #fff;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.header .logo {
+    font-size: 30px;
+    font-weight: 900;
+    text-decoration: none;
+    font-family: 'Oleo Script', cursive;
+    color: #000;
+    text-decoration: none;
+    transition: transform 0.3s ease-in-out;
+}
+
+.header .links--wrapper {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.header .links--wrapper .header--link {
+    text-decoration: none;
+    color: #000;
+    font-size: 18px;
+    margin: 0 20px; /* Adds space between nav links */
+    position: relative;
+    transition: color 0.3s ease-in-out;
+}
+
+.header .links--wrapper .header--link::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #005bbc;
+    transition: width 0.3s;
+}
+
+.header .links--wrapper .header--link:hover::after {
+    width: 100%;
+}
+
+/*----- Media Queries -----*/
+@media (max-width: 768px) {
+    .header {
+        padding: 10px;
+    }
+
+    .header .logo {
+        font-size: 24px;
+    }
+
+    .header .links--wrapper .header--link {
+        font-size: 16px;
+        margin: 0 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    .header .logo {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    .header .links--wrapper {
+        width: 100%;
+        justify-content: space-around;
+        margin-right: 0;
+    }
+
+    .header .links--wrapper .header--link {
+        font-size: 14px;
+        margin: 0 5px;
+    }
+}

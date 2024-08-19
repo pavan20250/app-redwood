@@ -1,0 +1,58 @@
+/* Profile.css */
+
+.profile-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    background-color: #f4f4f9;
+    padding: 20px;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.profile-box {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.profile-box:hover {
+    transform: translateY(-5px);
+}
+
+.profile-photo {
+    margin-bottom: 15px;
+    animation: bounce 1s infinite;
+}
+
+.profile-icon {
+    width: 100px;
+    height: 100px;
+    color: #3498db;
+}
+
+.profile-details p {
+    font-size: 16px;
+    margin: 10px 0;
+    color: #333;
+}
+
+.profile-details p strong {
+    color: #555;
+}
+
+/* Animations */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
